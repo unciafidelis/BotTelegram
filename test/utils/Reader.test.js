@@ -177,6 +177,7 @@ describe("Unit Tests for reader class", () => {
         ] );
     });
     test("2) get TOKEN from .env", () => {
+        const token = ""
         if(Reader.readToken() != undefined){
             token = "Token recibido"
         }
