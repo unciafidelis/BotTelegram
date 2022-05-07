@@ -1,0 +1,30 @@
+{
+  "name": "bottelegram",
+  "version": "1.0.0",
+  "description": "Bot de telegram con node js - Implementación de FizzBuzz",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "server": "node ./lib/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unciafidelis/BotTelegram.git"
+  },
+  "keywords": [],
+  "author": "Alejandro Morgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unciafidelis/BotTelegram/issues"
+  },
+  "homepage": "https://github.com/unciafidelis/BotTelegram#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^26.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
