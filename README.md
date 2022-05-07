@@ -47,3 +47,16 @@ module.exports = ExplorerController;
 La modificación de este archivo y de sus pruebas unitarias en `ExplorerController.test.js` desencadenó la refactorización
 de los demás archivos: `ExplorerService.js`, `ExplorerService.test.js`, `FizzBuzzService.js`, `FizzBuzzService.test.js`, `Reader.js`
 y `Reader.test.js`.
+
+
+## Instalación
+
+1. Clonar repo
+2. ejecutar la instrucción `npm update`
+Se requiere crear el archivo `.env`
+
+.env
+
+```javascript
+TOKEN="Aqui va tu token del bot de telegram"
+```
