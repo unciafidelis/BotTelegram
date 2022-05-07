@@ -180,7 +180,11 @@ describe("Unit Tests for reader class", () => {
         let token = ""
         if(Reader.readToken() != undefined){
             token = "Token recibido"
+            expect(token).toBe("Token recibido")
         }
-        expect(token).toBe("Token recibido")
+        else{
+            expect(token).toBe("Token no recibido")
+        }
+        
     })
 });
