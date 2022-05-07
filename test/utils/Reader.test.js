@@ -176,4 +176,10 @@ describe("Unit Tests for reader class", () => {
             }
         ] );
     });
+    test("2) get TOKEN from .env", () => {
+        if(Reader.readToken() != undefined){
+            token = "Token recibido"
+        }
+        expect(token).toBe("Token recibido")
+    })
 });
