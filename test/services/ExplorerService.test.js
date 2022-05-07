@@ -1,10 +1,8 @@
 const Reader = require("../../lib/utils/Reader");
-const explorers = new Reader;
 const ExplorerService = require("../../lib/services/ExplorerService");
-const XService = new ExplorerService;
 describe("Testing class Explorer Service", () => {
     test("1) Filter by Mission", () => {
-        expect(XService.filterByMission(explorers.readJsonPath("./explorers.json"), "node")).toStrictEqual(
+        expect(ExplorerService.filterByMission(Reader.readJsonPath("./explorers.json"), "node")).toStrictEqual(
             [
                 {
                     "name": "Woopa1",
@@ -128,10 +126,10 @@ describe("Testing class Explorer Service", () => {
         );
     });
     test("2) Get the amount of explorers by mission", () => {
-        expect(XService.getAmountOfExplorersByMission(explorers.readJsonPath("./explorers.json"), "node")).toBe(10);
+        expect(ExplorerService.getAmountOfExplorersByMission(Reader.readJsonPath("./explorers.json"), "node")).toBe(10);
     });
     test("3) get the explorers usernames by mission", () => {
-        expect(XService.getExplorersUsernamesByMission(explorers.readJsonPath("./explorers.json"), "node")).toStrictEqual(
+        expect(ExplorerService.getExplorersUsernamesByMission(Reader.readJsonPath("./explorers.json"), "node")).toStrictEqual(
             ["ajolonauta1", 
                 "ajolonauta2", 
                 "ajolonauta3", 

@@ -1,12 +1,9 @@
 const Reader = require("../../lib/utils/Reader");
 
 describe("Unit Tests for reader class", () => {
-    test("1) parse explorers.json", () => {
-        
-        const explorers = new Reader;
-        
+    test("1) parse explorers.json", () => {     
         //Code validation
-        expect(explorers.readJsonPath("./explorers.json")).toStrictEqual([
+        expect(Reader.readJsonPath("./explorers.json")).toStrictEqual([
             {
                 "name": "Woopa1",
                 "githubUsername": "ajolonauta1",

@@ -1,8 +1,8 @@
 const ExplorerController = require("../../lib/controllers/ExplorerController");
-let XController = new ExplorerController;
+
 describe("Testing ExplorerController class", () => {
     test("1) get explorers by mission", () => {
-        expect(XController.getExplorersByMission("node")).toStrictEqual(
+        expect(ExplorerController.getExplorersByMission("node")).toStrictEqual(
             [
                 {
                     "name": "Woopa1",
@@ -126,24 +126,27 @@ describe("Testing ExplorerController class", () => {
         );
     });
     test("2) get explorers usernames by mission", () => {
-        expect(XController.getExplorersUsernamesByMission("node")).toStrictEqual(
+        expect(ExplorerController.getExplorersUsernamesByMission("node")).toStrictEqual(
             ["ajolonauta1","ajolonauta2","ajolonauta3","ajolonauta4","ajolonauta5", 
                 "ajolonauta11", "ajolonauta12", "ajolonauta13", "ajolonauta14", "ajolonauta15"]
         );
     });
     test("3) get explorers amount by mission", () => {
-        expect(XController.getExplorersAmountByMission("node")).toStrictEqual(10);
+        expect(ExplorerController.getExplorersAmountByMission("node")).toStrictEqual(10);
     });
     test("4) apply validation in number 1", () => {
-        expect(XController.getApplyValidationInNumber(1)).toBe(1);
+        expect(ExplorerController.getApplyValidationInNumber(1)).toBe(1);
     });
     test("5) apply validation in number 3", () => {
-        expect(XController.getApplyValidationInNumber(3)).toBe("FIZZ");
+        expect(ExplorerController.getApplyValidationInNumber(3)).toBe("FIZZ");
     });
     test("6) apply validation in number 5", () => {
-        expect(XController.getApplyValidationInNumber(5)).toBe("BUZZ");
+        expect(ExplorerController.getApplyValidationInNumber(5)).toBe("BUZZ");
     });
     test("7) apply validation in number 15", () => {
-        expect(XController.getApplyValidationInNumber(15)).toBe("FIZZBUZZ");
+        expect(ExplorerController.getApplyValidationInNumber(15)).toBe("FIZZBUZZ");
     });
+    test("8) apply validation FIZZBUZZ in applyFizzbuzz 15", () => {
+        expect(ExplorerController.applyFizzbuzz(15)).toBe("FIZZBUZZ");
+    })
 });
