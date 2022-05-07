@@ -1,9 +1,6 @@
 # BotTelegram
 Bot de telegram con node js - Implementación de FizzBuzz
 
-# BotTelegram
-Bot de telegram con node js - Implementación de FizzBuzz
-
 ### Aviso Importante
 
 Se realizó un refactor de todas las clases y pruebas ya que las funciones no eran estáticas
