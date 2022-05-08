@@ -149,4 +149,8 @@ describe("Testing ExplorerController class", () => {
     test("8) apply validation FIZZBUZZ in applyFizzbuzz 15", () => {
         expect(ExplorerController.applyFizzbuzz(15)).toBe("FIZZBUZZ");
     })
+    test("9) Testing getOnMsg as false", () => {
+        const token = "Not a token"
+        expect(ExplorerController.getOnMsg(token)).toBe("Token not available")
+    })
 });
