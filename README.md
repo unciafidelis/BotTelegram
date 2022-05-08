@@ -60,3 +60,31 @@ Se requiere crear el archivo `.env`
 ```javascript
 TOKEN="Aqui va tu token del bot de telegram"
 ```
+
+## Creación de TelegramBotController.js
+
+Este controlador se creó para evitar la redundancia existente en las funciones
+incluidas en TelegramBotService para el despliegue del Bot, estas utilizan funciones
+incluidas en ExplorerController haciendo imposible la integración en este controlador.
+
+TelegramBotController.js
+
+```javascript
+    const TelegramBotService = require("../services/TelegramBotService")
+
+class TelegramBotController{
+
+    static getOnMsg(token){
+        if (token == "Not a token"){
+            return "Token not available"
+        }
+        else{
+            return TelegramBotService.onMsg(token) // Esta funcion contiene metodos incluidos en ExplorerController.js por ello no se incluyó en el mismo controlador.
+        }
+
+    }
+}
+
+module.exports = TelegramBotController 
+```
+
